@@ -6,17 +6,26 @@ public class Cell_2048 {
 	//	When the value is zero, it means that the
 	//	cell is not set.
 	//	Value should otherwise be a power of two (greater than one)
-	int value;
+	private int value;
 	
 	public Cell_2048() {
-		//  TODO: Create a new cell with default value
-		//  Cell should be unset
+		 //  Cell should be unset
+		value=0;
 	}
 	
 	public Cell_2048(int v) {
-		//  TODO: creates a cell initialized with a user-provided value
+		value = v;
 	}
 	
+	
+	public int getValue() {
+		return value;
+	}
+
+	public void setValue(int value) {
+		this.value = value;
+	}
+
 	public boolean is_valid_value (int v){
 		//Returns true if value is either 0, or a power of two
 		//greater than 1.
