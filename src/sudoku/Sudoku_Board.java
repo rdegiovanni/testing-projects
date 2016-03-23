@@ -6,8 +6,23 @@ public class Sudoku_Board {
 	Sudoku_Cell [][] cells;
 	
 	public Sudoku_Board(){
-		// Initializes the board as empty
+	// Initializes the board as empty
+		int i,j;
+		Sudoku_Cell cell; 
+		cells =new Sudoku_Cell[10][10];
+		
+		for(i=0;i<=9;i++){
+			for(j=0;j<=9;i++){
+				cell=new Sudoku_Cell();
+				cells[i][j] =cell;
+			}
+		}
+		
+		
+		
 	}
+	
+	
 	
 	public int cell_value (int row, int col){
 		return cells[row][col].getValue();
