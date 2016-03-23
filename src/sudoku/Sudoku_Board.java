@@ -23,7 +23,6 @@ public class Sudoku_Board {
 	}
 	
 	
-	
 	public int cell_value (int row, int col){
 		return cells[row][col].getValue();
 	}
@@ -33,9 +32,25 @@ public class Sudoku_Board {
 	}
 	
 	public boolean is_complete(){
-		//TODO:Return true iff the board is complete (all cells are seted with a nonzero value)
-		return false;
+		//Return true iff the board is complete (all cells are seted with a nonzero value)
+		int i,j; //indexes used to pass through the matrix of SUDOKU_CELL
+		boolean filled = true;//flag that indicates if the current cell is filled with a nonzero value
+		i =0;
+		while(i<=9 && filled){
+			j=0;
+			while(j<=9 && filled){
+				if (cell_value(i,j) == 0){
+						filled = false;
+				}	
+				j++;
+			}
+			i++;
+		}
+			
+		return filled;
 	}
+	
+	
 	
 	public boolean is_valid(){
 		// is the board valid (no conflicts so far)?
